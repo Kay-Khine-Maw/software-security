@@ -9,17 +9,33 @@
 ## Part 1 — Student Information
 | Name | Student ID | Date | Group |
 |---|---|---|---|
-| | | | |
+|Kay Khine Maw | 6631503060 | 28 Aug 2026 | |
 
 ## Part 2 — Lecture Questions
 Answer in your own words (2–4 sentences each).
 1. Distinguish SAST, DAST, and SCA — what does each see, and when in the SDLC does each run?
+
+**SAST** checks source code for security problems during coding or build stages. **DAST** tests a running application after deployment, while **SCA** checks third-party libraries and dependencies for known vulnerabilities during the build process.
+
 2. What is secret scanning, and why do hardcoded secrets keep ending up in repos?
+
+**Secret scanning** detects passwords, API keys, tokens, and other sensitive data in repositories. Secrets often get committed because developers use them for testing and forget to remove them before pushing code.
+
 3. What does "shift-left / DevSecOps" mean in practice for a CI pipeline?
+
+**Shift-left** means adding security checks earlier in development. In CI, tools like SAST, SCA, and secret scanning run automatically before vulnerable code is merged or deployed.
+
 4. Why is coverage-guided fuzzing considered the dominant modern bug-finding technique?
+
+Coverage-guided fuzzing sends many unusual inputs to a program and tracks which code paths are reached. It can discover crashes and hidden bugs that normal tests may miss.
+
 5. Define true positive vs. false positive in scanner triage, and why misclassifying both directions is costly.
 
+A **true positive** is a real security issue, while a **false positive** is a warning that is not actually a vulnerability. False positives waste developers' time, while missing true positives can leave real vulnerabilities unfixed.
+
 ![A left to right SDLC pipeline showing SAST at write code, secret scanning at commit, SCA and fuzzing at build, and DAST at deploy, with what each tool cannot see written underneath it.](img/sdlc-gates.svg)
+
+---
 
 ## Part 3 — Hands-on Lab (180 min)
 **Learning goals:** run a SAST tool and a secret scanner, triage findings by CWE/severity, and remediate real flaws.
