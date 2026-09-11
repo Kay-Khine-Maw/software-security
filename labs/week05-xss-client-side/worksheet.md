@@ -243,9 +243,3 @@ This week’s app takes whatever text the user enters in `/hello` or in a commen
 **Final Prompt:** “Fix the XSS and CSRF vulnerability in a Flask app by escaping all user input before rendering it in HTML, adding a strict Content-Security-Policy header, setting the session cookie to HttpOnly; SameSite=Strict; Secure, and implementing a server-side CSRF token check on all POST requests. Explain why the fix works and verify that a payload like `<script>alert(document.cookie)</script>` is rendered as text and a forged cross-site POST is rejected.”
 
 **Verified result:** After applying the fix, the script payload was rendered as plain text instead of executing, the CSP header was present in DevTools, and the cookie was sent with the hardened flags. The cross-site POST was still rejected only when the server checked the CSRF token or origin, which confirms that browser cookie hardening alone is not sufficient.
-
----
-
-**Github Commit Link**
-
-https://github.com/Kay-Khine-Maw/software-security/tree/wk05
