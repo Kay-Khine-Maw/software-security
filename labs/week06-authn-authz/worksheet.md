@@ -218,6 +218,7 @@ Deny-by-default ownership checks protect the most attack surface because they pr
   byte-identical for the whole cohort *by design*, so the stamp is the only thing that makes
   the shot yours. Generic or borrowed evidence is not accepted.
 - **Personalized flag (if this lab issues one):** FLAG{idor_demo}
+
   *Flags are unique per student — submitting another student's flag is a violation. How to submit: **learn.zcr.ai/submit** (full guide: `SUBMISSION.md` in the repo root).*
 - **Explain in your own words** *(graded on your reasoning, not copied text):*
 
