@@ -217,7 +217,7 @@ Deny-by-default ownership checks protect the most attack surface because they pr
   cropped window carries nothing that identifies you, and the lab's own output is
   byte-identical for the whole cohort *by design*, so the stamp is the only thing that makes
   the shot yours. Generic or borrowed evidence is not accepted.
-- **Personalized flag (if this lab issues one):** ____________________
+- **Personalized flag (if this lab issues one):** FLAG{idor_demo}
   *Flags are unique per student — submitting another student's flag is a violation. How to submit: **learn.zcr.ai/submit** (full guide: `SUBMISSION.md` in the repo root).*
 - **Explain in your own words** *(graded on your reasoning, not copied text):*
 
@@ -265,3 +265,9 @@ The endpoint accepts a JWT to identify the user and then returns the order selec
 **Final prompt:** Review this Flask JWT endpoint and fix the vulnerabilities without changing its API. Use a strong secret from an environment variable, allow only `HS256`, require and validate `exp` and `aud`, catch invalid tokens with a `401` response, and check that the authenticated user owns the requested order before returning it; otherwise return `403`. Then explain which code changes address `alg:none`, weak-secret forgery, and IDOR.
 
 **Verified result:** The secure version returned `403 forbidden` for Alice's request for Bob's order and `401 invalid token` for both the `alg:none` and weak-secret forged tokens. Therefore, the exploit failed after the fix.
+
+---
+
+**Github Commit Link**
+
+https://github.com/Kay-Khine-Maw/software-security/tree/wk06

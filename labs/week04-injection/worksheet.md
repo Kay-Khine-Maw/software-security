@@ -247,3 +247,9 @@ This week's app takes user input from the URL and then injects it into SQL, a sh
 
 I ran the exploit against the fixed app using `curl -s "http://localhost:5000/ping?host=127.0.0.1;id"` and the response was `invalid host` with HTTP 400. The shell was not invoked, so the injection payload did not execute. This confirms the prompt produced a secure fix that actually blocked the exploit.
 
+---
+
+**Github Link**
+
+https://github.com/Kay-Khine-Maw/software-security/tree/wk04
+
